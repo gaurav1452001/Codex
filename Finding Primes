@@ -1,0 +1,43 @@
+
+//finding if it has any divisors in between 
+#include <bits/stdc++.h>
+using namespace std;
+bool isPrime(int n)
+{
+    if (n <= 1)
+        return false;
+ 
+    for (int i = 2; i * i <= n; i++)
+    {
+        if (n % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+ ----------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Sieve of Eratosthenes
+
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+    const int n = 1e5 + 5;                    // the limit of n can be changed if you want a much bigger end limit
+    vector<bool> is_prime(n + 1, true);       //we are assuming every number is a prime
+    is_prime[0] = is_prime[1] = false;
+    for (int i = 2; i * i <= n; i++)          
+    {
+        if (is_prime[i])
+        {
+            for (int j = i * i; j <= n; j += i)   //make all the factors false
+                is_prime[j] = false;
+        }
+    }
+    //now you can use the vector "is_prime" to check if any number if prime or not
+    //example- isprime[4]-it will check if 4 is a prime or not
+}
