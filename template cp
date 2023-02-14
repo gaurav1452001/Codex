@@ -1,7 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
+//for faster input and output,use by calling:l=IN(),r=IN();
+inline int IN(){
+    int x=0,ch=getchar(),f=1;
+    while (!isdigit(ch)&&(ch!='-')&&(ch!=EOF)) ch=getchar();
+    if (ch=='-'){f=-1;ch=getchar();}
+    while (isdigit(ch)){x=(x<<1)+(x<<3)+ch-'0';ch=getchar();}
+    return x*f;
+}
 
 #define rep(i,n) for (int i = 0; i < (n); ++i)
+#define irep(i,a,b) for (int i = a; i <= b; i++)
+#define drep(i,a,b) for (int i = a; i >= b; i--)
 #define ll long long int
 #define v1 vector<int>
 #define mod 1000000007
@@ -15,6 +25,9 @@ int solve()
 }
 int main()
 {
+    //ios_base::sync_with_stdio(0); //faster input 
+    //cout.tie(0);                 
+    //cin.tie(0);
     int t;
     cin >> t;
     while (t--)
