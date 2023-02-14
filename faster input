@@ -1,0 +1,22 @@
+
+METHOD 1
+-------------
+for faster input and output in codeforces copy the following 3 lines in the starting of main function(C++)
+
+    ios_base::sync_with_stdio(0);
+    cout.tie(0);                 
+    cin.tie(0); 
+    
+    
+METHOD 2
+--------------
+inline int IN(){
+	int x=0,ch=getchar(),f=1;
+	while (!isdigit(ch)&&(ch!='-')&&(ch!=EOF)) ch=getchar();
+	if (ch=='-'){f=-1;ch=getchar();}
+	while (isdigit(ch)){x=(x<<1)+(x<<3)+ch-'0';ch=getchar();}
+	return x*f;
+}
+//to use
+int l,r;
+l=IN(),r=IN();
