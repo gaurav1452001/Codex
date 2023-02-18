@@ -1,0 +1,10 @@
+for i in range(int(input())):
+    a=sorted([int(a) for a in input().split()])
+    
+    //the first for loop will take the number of testcases as input and it will run the specified number of times
+    //inside the for loop, the input will automatically will get updated after every input 
+    //also the input will be taken in a straight line
+    //EX-      3(testcase)
+    //         2 1 5 3
+    //         a will become 1 2 3 5
+               
