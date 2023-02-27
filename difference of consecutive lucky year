@@ -1,0 +1,18 @@
+#naive approach(personal)
+----------------------------------------
+import math
+n=input()
+nint=int(n)
+d=int(n[0])
+dig=int(math.log10(nint))+1
+if 0<=d<=8:
+  res=(d+1)*(10**(dig-1))
+else:
+  res=1*(10**dig)
+print(res-nint)
+
+#shortcut
+-----------------------------------------
+y=input()[1:]
+print(10**len(y)-int(y or 0))
+
